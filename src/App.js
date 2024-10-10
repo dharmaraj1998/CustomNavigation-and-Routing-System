@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import Button from "./Button";
+import { HiAnnotation } from "react-icons/hi";
+import { IoIosApps } from "react-icons/io";
+import { IoIosBeer } from "react-icons/io";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import { IoIosCalendar } from "react-icons/io";
+import { IoAdd } from "react-icons/io5";
+
+const App = ()=>{
+  const handle = ()=>{
+    console.log("Button clicked");
+  }
+    return (
+        <>
+        <div >
+          <Button primary className="mr-5" onClick ={handle}> 
+          <HiAnnotation/>
+          click me
+          </Button>
+          
+        </div>
+         <div>
+         <Button secondary>
+         <IoIosApps/>click me
+          
+         </Button>
+      </div>
+       <div>
+       <Button success>
+       <IoIosBeer />
+       click me</Button>
     </div>
-  );
+     <div >
+     <Button danger>
+      <IoIosCalendar/>click me</Button>
+     
+  </div>
+  <div >
+     <Button warning>
+      <IoAdd/>click me</Button>
+  </div>
+  </>
+    )
 }
-
 export default App;
