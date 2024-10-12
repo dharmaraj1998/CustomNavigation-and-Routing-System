@@ -1,45 +1,27 @@
-import Button from "./Button";
-import { HiAnnotation } from "react-icons/hi";
-import { IoIosApps } from "react-icons/io";
-import { IoIosBeer } from "react-icons/io";
+import { useState } from "react";
+import Dropdown from "./componenets/Dropdown";
 
-import { IoIosCalendar } from "react-icons/io";
-import { IoAdd } from "react-icons/io5";
 
-const App = ()=>{
-  const handle = ()=>{
-    console.log("Button clicked");
+
+
+function App(){
+  const [selected,setSelected] = useState(null)
+
+  const handleSelected =(option)=>{
+    setSelected(option)
   }
-    return (
-        <>
-        <div >
-          <Button primary className="mr-5" onClick ={handle}> 
-          <HiAnnotation/>
-          click me
-          </Button>
-          
-        </div>
-         <div>
-         <Button secondary>
-         <IoIosApps/>click me
-          
-         </Button>
-      </div>
-       <div>
-       <Button success>
-       <IoIosBeer />
-       click me</Button>
-    </div>
-     <div >
-     <Button danger>
-      <IoIosCalendar/>click me</Button>
+  const options = [
+    {label :"Red",value : "red"},
+    {label :"Blue",value : "Blue"},
+    {label :"Orange",value : "orange"}
+  ]
+
+  return(
+    <div>
      
-  </div>
-  <div >
-     <Button warning>
-      <IoAdd/>click me</Button>
-  </div>
-  </>
-    )
+      <Dropdown options={options} selected = {selected} handleSelected ={handleSelected}/>
+    
+    </div>
+  )
 }
 export default App;
