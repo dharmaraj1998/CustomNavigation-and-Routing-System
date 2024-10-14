@@ -2,6 +2,7 @@ import Sidebar from './components/Sidebar';
 import Route from './components/Route';
 import AccordionPage from './pages/AccordionPage';
 import DropdownPage from './pages/DropdownPage';
+import ModelPage from './pages/Modelpage';
 
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path="/">
           <DropdownPage />
+        </Route>
+        <Route path="/model">
+          <ModelPage/>
         </Route>
       </div>
     </div>
