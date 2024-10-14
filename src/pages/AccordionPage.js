@@ -1,26 +1,28 @@
-import Accordion from "../componenets/Accordion";
+import Accordion from '../components/Accordion';
 
-function AccordionPage(){
-
+function AccordionPage() {
   const items = [
     {
-      id : "23ji",
-      label :"enter your name",
-      description :"we should take your address"
-    },{
-      id : "78kd",
-      label :"enter your name",
-      description :"we should take your address"
-    },{
-      id : "45k",
-      label :"enter your name",
-      description :"we should take your address"
-    }
-  ]
-  return(
-    <div>
-      <Accordion items = {items}/>
-    </div>
-  )
+      id: 'l2kj5',
+      label: 'Can I use React on a project?',
+      content:
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+    },
+    {
+      id: 'lk2j35lkj',
+      label: 'Can I use Javascript on a project?',
+      content:
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+    },
+    {
+      id: 'l1kj2i0g',
+      label: 'Can I use CSS on a project?',
+      content:
+        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+    },
+  ];
+
+  return <Accordion items={items} />;
 }
+
 export default AccordionPage;
