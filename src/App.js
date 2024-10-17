@@ -3,7 +3,7 @@ import Route from './components/Route';
 import AccordionPage from './pages/AccordionPage';
 import DropdownPage from './pages/DropdownPage';
 import ModelPage from './pages/Modelpage';
-
+import TablePage from './pages/TablePage'
 
 function App() {
   return (
@@ -18,6 +18,9 @@ function App() {
         </Route>
         <Route path="/model">
           <ModelPage/>
+        </Route>
+        <Route path="/table">
+          <TablePage/>
         </Route>
       </div>
     </div>
