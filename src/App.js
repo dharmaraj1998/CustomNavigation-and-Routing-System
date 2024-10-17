@@ -4,6 +4,7 @@ import AccordionPage from './pages/AccordionPage';
 import DropdownPage from './pages/DropdownPage';
 import ModelPage from './pages/Modelpage';
 import TablePage from './pages/TablePage'
+import CounterPage from './pages/CounterPage';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/table">
           <TablePage/>
+        </Route>
+        <Route path="/counter">
+          <CounterPage/>
         </Route>
       </div>
     </div>
